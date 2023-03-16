@@ -1,0 +1,42 @@
+.color_white {
+  color: '#fff'
+}
+
+.text_center {
+  text-align: center;
+}
+
+h2.major {
+  margin-bottom: 2rem;
+}
+h2.major:after {
+  background: none;
+}
+
+a {
+  border-bottom: none !important;
+}
+
+.bg_gradient_blue {
+  background: linear-gradient(90deg, #ABE0F8 0%, #C8C6FF 100%) !important;
+  border-radius: 1.5rem !important;
+}
+
+.custom_search {
+  position: absolute;
+  top: 44%;
+  right: 9%;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  color: #2baaf8;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar { width: 5.2px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background-color:#fff; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; } /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #404040; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:active { background: #808080; } /* 실질적 스크롤 바를 클릭할 때 */
+::-webkit-scrollbar-button { display: none; } /* 스크롤 바 상 하단 버튼 */
