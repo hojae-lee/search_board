@@ -62,7 +62,7 @@ export default {
     ...mapGetters(['getTopicCount']),
     ...mapGetters(['getBoardInfo']),
     getHref() {
-      const baseURL = this.cnt === this.getTopicCount.length ? 'board' : `question${this.cnt + 1}`
+      const baseURL = this.cnt === this.getTopicCount ? 'board' : `question${this.cnt + 1}`
 
       return `#${baseURL}`
     }
@@ -73,9 +73,8 @@ export default {
     },
     async setBoardInfo() {
       this.$store.commit('SET_BOARD_INFO', this.radioData.trim())
+      this.loading = true
       if (this.getHref === '#board') {
-        this.loading = true
-        // 여기가 마지막이니까 해당 데이터를 기반으로 호출해줘야함.
         const q = `${this.getTopic}:${this.getBoardInfo.join(",")}`
         setTimeout(async () => {
           await this.$store.dispatch('FETCH_RESULT_SEARCH', q)
