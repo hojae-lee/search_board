@@ -1,5 +1,5 @@
 <template>
-  <a @click="showCart" class="floating-button">🎁 ( {{ getSaveBoards.length }} )</a>
+  <a @click="showCart" class="floating-button">🛒 ( {{ getSaveBoards.length }} )</a>
 </template>
 <script>
 import { mapGetters } from 'vuex'

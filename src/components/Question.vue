@@ -73,8 +73,8 @@ export default {
     },
     async setBoardInfo() {
       this.$store.commit('SET_BOARD_INFO', this.radioData.trim())
-      this.loading = true
       if (this.getHref === '#board') {
+        this.loading = true
         const q = `${this.getTopic}:${this.getBoardInfo.join(",")}`
         setTimeout(async () => {
           await this.$store.dispatch('FETCH_RESULT_SEARCH', q)

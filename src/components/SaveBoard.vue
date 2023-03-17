@@ -1,14 +1,6 @@
 <template>
   <section class="panel" id="board" v-if="getSaveBoards.length">
     <div class="gallery">
-      <div class="group span-2 layout" style="width:28rem;">
-        <div class="group-major">
-          <div>
-            <h3 class="major">AI를 마케팅 업무에 활용하는 방법</h3>
-            <p>검색 결과의 보드입니다.</p>
-          </div>
-        </div>
-      </div>
       <div class="group span-6 layout">
         <a v-for="(board, idx) in getSaveBoards" class="image filtered span-1-5" data-position="center" :key="'s'+ board.type + idx">
           <CardHover :item="board" :active="true"/>
@@ -39,7 +31,6 @@ export default {
 <style scoped>
 .layout {
   height: 100%;
-  background:linear-gradient(45deg, #FFB798 0%, #CE86A0 100%);
 }
 .group-major {
   height: 100%;

@@ -4,7 +4,7 @@
     <div class="menu" :class="{show: getToggle}">
       <button class="main-button" type="button" @click="clickHandler('bad')">👎</button>
       <button class="main-button" type="button" @click="clickHandler('good')">👍</button>
-      <button class="main-button" type="button" @click="clickHandler('save')">📋</button>
+      <button class="main-button" type="button" @click="clickHandler('save')">{{ saveButton }}</button>
     </div>
   </div>
 </template>
@@ -21,7 +21,8 @@ export default {
   data() {
     return {
       toggle: false,
-      mainButton: '➕'
+      mainButton: '➕',
+      saveButton: '📋'
     }
   },
   computed: {
@@ -43,7 +44,9 @@ export default {
           alert('😇')
           break;
         case 'save':
+          if (this.saveButton === '✔') return
           this.$store.commit('SET_SAVE_BOARD', this.item)
+          this.saveButton = '✔'
           break;
       }
     }
