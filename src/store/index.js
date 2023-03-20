@@ -1,9 +1,9 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import mutations from "./mutations";
-import actions from "./actions";
+import Vue from "vue"
+import Vuex from "vuex"
+import mutations from "./mutations"
+import actions from "./actions"
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
@@ -34,4 +34,4 @@ export const store = new Vuex.Store({
   },
   mutations,
   actions,
-});
+})

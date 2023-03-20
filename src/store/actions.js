@@ -1,4 +1,4 @@
-import { getTopicInfo, getResultBoards } from '@/api';
+import { getTopicInfo, getResultBoards } from '@/api'
 
 export default {
   async FETCH_TOPIC_INFO({ commit }, topic) {
